@@ -5,12 +5,16 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `none`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
+        display:"flex",
+        flexDirection:"flow",
+        justifyContent:"space-between",
+        alignItems:"center",
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
@@ -20,13 +24,14 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
           }}
         >
           {siteTitle}
         </Link>
       </h1>
+      <i style={{justifyContent:"flex-end"}} class="fas fa-bars"></i>
     </div>
   </header>
 )
