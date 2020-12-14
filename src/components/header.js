@@ -16,9 +16,7 @@ const Header = ({ siteTitle }) => (
         flexDirection:"flow",
         justifyContent:"space-between",
         alignItems:"center",
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        
       }}
     >
       <h1 style={{ margin: 0 }}>
