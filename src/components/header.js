@@ -30,18 +30,9 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <Link className={headerStyles.navtitle} style={{
-        color: `black`,
-        textDecoration: `none`,
-      }} to="/about">About Us</Link>
-      <Link className={headerStyles.navtitle} style={{
-        color: `black`,
-        textDecoration: `none`,
-      }} to="/contact">Contact Us</Link>
-      <Link className={headerStyles.navtitle} style={{
-        color: `black`,
-        textDecoration: `none`,
-      }} to="/work">Our Work </Link>
+      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/about">About Us</Link>
+      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/contact">Contact Us</Link>
+      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/work">Our Work </Link>
       <i style={{justifyContent:"flex-end"}} class="fas fa-bars"></i>
     </div>
   </header>

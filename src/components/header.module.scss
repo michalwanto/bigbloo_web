@@ -4,6 +4,14 @@
   flex-grow: 1;
 }
 
+.navtitle {
+  color: rgb(138, 138, 138);
+  text-decoration: none;
+}
+.navtitleActive {
+  color: rgb(29, 29, 29);
+}
+
 @media only screen and (max-width: 700px) {
   .navtitle {
     font-size: 0;
