@@ -1,11 +1,22 @@
-import { Link } from "gatsby"
+import { Link,graphql,useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+
 
 import headerStyles from "./header.module.scss"
 
 
-const Header = ({ siteTitle }) => (
+const Header = () =>{
+const data =useStaticQuery(graphql`
+query{
+  site{
+    siteMetadata{
+      title
+    }
+  }
+}
+`)
+return(
   <header
     className={headerStyles.header}
   >
@@ -27,16 +38,17 @@ const Header = ({ siteTitle }) => (
             flexGrow:"1"
           }}
         >
-          {siteTitle}
+        {data.site.siteMetadata.title}
         </Link>
       </h1>
       <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/about">About Us</Link>
       <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/contact">Contact Us</Link>
       <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/work">Our Work </Link>
-      <i style={{justifyContent:"flex-end"}} class="fas fa-bars"></i>
+      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/blog">Blogs</Link>
+      <i style={{justifyContent:"flex-end"}} className="fas fa-bars"></i>
     </div>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
