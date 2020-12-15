@@ -2,13 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import headerStyles from "./header.module.scss"
+
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `none`,
-      marginBottom: `1.45rem`,
-    }}
+    className={headerStyles.header}
   >
     <div
       style={{
@@ -20,25 +19,26 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <Link
+        <Link 
           to="/"
           style={{
             color: `black`,
             textDecoration: `none`,
+            flexGrow:"1"
           }}
         >
           {siteTitle}
         </Link>
       </h1>
-      <Link style={{
+      <Link className={headerStyles.navtitle} style={{
         color: `black`,
         textDecoration: `none`,
       }} to="/about">About Us</Link>
-      <Link style={{
+      <Link className={headerStyles.navtitle} style={{
         color: `black`,
         textDecoration: `none`,
       }} to="/contact">Contact Us</Link>
-      <Link style={{
+      <Link className={headerStyles.navtitle} style={{
         color: `black`,
         textDecoration: `none`,
       }} to="/work">Our Work </Link>
