@@ -2,32 +2,43 @@ import React from 'react'
 import Layout from "../components/layout"
 import {graphql, useStaticQuery} from "gatsby"
 
-import SimpleCard from "../components/blog/blogCard"
+import BlogCard from "../components/blog/BlogCard"
 
 const BlogPage =()=>{
   const data = useStaticQuery(graphql`
   query{
-    allMarkdownRemark{
+  allMarkdownRemark{
     edges{
       node{
+        excerpt
+        timeToRead
+        html
         frontmatter{
           title
           date
         }
-        html
-        excerpt
+        fields{
+          slug
+        }
         
       }
-    }  
+    }
   }
   }
   `) 
     return(
         <Layout>
-        <p>This it the blog page</p>
         {data.allMarkdownRemark.edges.map(edge =>(
           <div>
-          <SimpleCard title={edge.node.frontmatter.title} date={edge.node.frontmatter.date}  ></SimpleCard>
+          <BlogCard 
+          title={edge.node.frontmatter.title} 
+          date={edge.node.frontmatter.date} 
+          slug={edge.node.fields.slug} 
+          excerpt={edge.node.excerpt} 
+          timeToRead={edge.node.timeToRead}
+
+          
+          ></BlogCard>
           </div>
           
           ))}

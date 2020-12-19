@@ -1,5 +1,5 @@
 ---
-title: "gatsby"
+title: "Gatsby"
 date: "2020-12-15"
 ---
 

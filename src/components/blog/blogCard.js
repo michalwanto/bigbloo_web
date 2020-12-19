@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import {Link} from 'gatsby'
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 275,
@@ -25,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard(props) {
+export default function BlogCard(props) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -39,16 +41,17 @@ export default function SimpleCard(props) {
           {props.title}
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          adjective
+          {props.timeToRead + "min"}
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
+          {props.excerpt}
           <br />
-          {'"a benevolent smile"'}
         </Typography>
       </CardContent>
       <CardActions>
+      <Link to={`/blog/${props.slug}`}>
         <Button size="small">Learn More</Button>
+        </Link>
       </CardActions>
     </Card>
   );
