@@ -15,7 +15,7 @@ query{
 `)
     return(
       <div>
-        <div className={"footerStyles on holidays"}>
+        <div className={footerStyles.divNavTitle}>
         <Link className={footerStyles.navtitle} activeClassName={footerStyles.navtitleActive} to="/about">About Us</Link>
         <Link className={footerStyles.navtitle} activeClassName={footerStyles.navtitleActive} to="/contact">Contact Us</Link>
         <Link className={footerStyles.navtitle} activeClassName={footerStyles.navtitleActive} to="/work">Our Work </Link>
