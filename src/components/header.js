@@ -41,10 +41,6 @@ return(
         {data.site.siteMetadata.title}
         </Link>
       </h1>
-      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/about">About Us</Link>
-      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/contact">Contact Us</Link>
-      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/work">Our Work </Link>
-      <Link className={headerStyles.navtitle} activeClassName={headerStyles.navtitleActive} to="/blog">Blogs</Link>
       <i style={{justifyContent:"flex-end"}} className="fas fa-bars"></i>
     </div>
   </header>
