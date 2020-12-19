@@ -330,10 +330,9 @@ h6 {
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-weight: lighter;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
+  font-size: 0.8rem;
 }
 hgroup {
   margin-left: 0;
