@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: '2%',
     right: '50%',
-    left:'48%',
+    left:'48.1%',
   },
   paper: {
     marginRight: theme.spacing(2),
