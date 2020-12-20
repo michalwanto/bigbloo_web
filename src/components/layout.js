@@ -21,11 +21,12 @@ const Layout = ({ children }) => {
 
   return (
     <div className={layoutStyles.container}>
+    <MenuButton/>
     <div className={layoutStyles.content}>
       <Header />
       
         <main>{children}</main>
-        <MenuButton/>
+        
         
       </div>
       <Footer></Footer>

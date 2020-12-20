@@ -8,12 +8,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 
+import menuButtonStyles from "./menuButton.module.scss"
+
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'fixed',
     bottom: '2%',
-    right: '50%',
-    left:'50%',
+  
+    transform: 'translate('-50%', '-50%')',
   },
   paper: {
     marginRight: theme.spacing(2),
@@ -55,7 +57,7 @@ export default function MenuButton() {
   }, [open]);
 
   return (
-    <div className={classes.root}>
+    <div className={menuButtonStyles.center}>
       <div>
         <Button
           ref={anchorRef}
