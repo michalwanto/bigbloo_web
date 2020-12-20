@@ -1,6 +1,7 @@
-.div {
+.container {
   display: flex;
-  margin-bottom: 100px;
+  flex-direction: column;
+  margin-top: 9rem;
 }
 
 .divNavTitle {

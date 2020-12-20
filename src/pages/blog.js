@@ -28,8 +28,13 @@ const BlogPage =()=>{
   `) 
     return(
         <Layout>
+        <div style={{
+          display:'flex',
+          "flexDirection":"row",
+          "flexWrap":"wrap"
+      }}>
         {data.allMarkdownRemark.edges.map(edge =>(
-          <div>
+          
           <BlogCard 
           title={edge.node.frontmatter.title} 
           date={edge.node.frontmatter.date} 
@@ -39,9 +44,10 @@ const BlogPage =()=>{
 
           
           ></BlogCard>
-          </div>
+          
           
           ))}
+          </div>
           
         
         </Layout>

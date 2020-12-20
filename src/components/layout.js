@@ -14,6 +14,8 @@ import Footer from "./footer"
 import "./layout.css"
 import layoutStyles from "./layout.module.scss"
 
+import MenuButton from "./buttons/menuButton"
+
 const Layout = ({ children }) => {
   
 
@@ -23,6 +25,7 @@ const Layout = ({ children }) => {
       <Header />
       
         <main>{children}</main>
+        <MenuButton/>
         
       </div>
       <Footer></Footer>

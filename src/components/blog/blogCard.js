@@ -12,6 +12,7 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 275,
     marginBottom:"10px",
+    marginRight:"10px",
     backgroundColor:"rgb(236, 236, 236)"
   },
   bullet: {
